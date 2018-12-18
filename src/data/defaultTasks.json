@@ -1,0 +1,14 @@
+[
+  {
+    "name":"sacar el pero a pasear",
+    "state":true
+  },
+  {
+    "name":"Fregar el piso",
+    "state":false
+  },
+  {
+    "name":"Tender la ropa",
+    "state":false
+  }
+]

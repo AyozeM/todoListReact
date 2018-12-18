@@ -1,0 +1,12 @@
+ul{
+  list-style: none;
+}
+
+.add{
+  color:lightgray;
+  cursor: pointer;
+  transition: .3s;
+}
+.add:hover{
+  color:black;
+}
