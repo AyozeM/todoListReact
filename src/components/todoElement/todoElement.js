@@ -10,13 +10,16 @@ export default class todoElement extends Component {
   }
 
   changeEvent(){
-    this.state.do = !this.state.do;
-    this.render();
+    this.setState({do:!this.state.do})
   }
 
   render() {
     return (
-      <li><input type="checkbox" onChange={this.changeEvent.bind(this)} defaultChecked={this.state.do}/> {this.props.name}</li>
+      <li>
+        <label htmlFor="">
+          <input type="checkbox" onChange={this.changeEvent.bind(this)} defaultChecked={this.state.do}/> {this.props.name}
+        </label>
+      </li>
     )
   }
 }
