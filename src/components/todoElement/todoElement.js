@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import './todoElement.css'
 
 export default class todoElement extends Component {
   constructor(name,done){
@@ -16,8 +16,9 @@ export default class todoElement extends Component {
   render() {
     return (
       <li>
-        <label htmlFor="">
-          <input type="checkbox" onChange={this.changeEvent.bind(this)} defaultChecked={this.state.do}/> {this.props.name}
+        <label>
+          <input type="checkbox" onChange={this.changeEvent.bind(this)} defaultChecked={this.state.do}/> 
+          <span>{this.props.name}</span>
         </label>
       </li>
     )

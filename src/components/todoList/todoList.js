@@ -21,9 +21,14 @@ export default class todoList extends React.Component{
     }
   }
   addTask(){
-    const actualTasks = this.state.tasks;
-    actualTasks.push({name:this.state.newTaskText,state:false});
-    this.setState({tasks:actualTasks,newTaskText:''});
+    const newTaskText = this.state.newTaskText.trim();
+    if(newTaskText.length > 0){
+      const actualTasks = this.state.tasks;
+      actualTasks.push({name:newTaskText,state:false});
+      this.setState({tasks:actualTasks,newTaskText:''});
+    }else{
+      alert('debe escribir algo')
+    }
   }
   render(){
     return(
